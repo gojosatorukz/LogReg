@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход и Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="register-form">
+            <h2>Регистрация</h2>
+            <input type="email" id="reg-email" placeholder="Email">
+            <input type="password" id="reg-pass" placeholder="Пароль (мин 6 символов)">
+            <button onclick="register()">Зарегистрироваться</button>
+            <p>Уже есть аккаунт? <a href="#" onclick="showLogin()">Войти</a></p>
+        </div>
+
+        <div id="login-form" style="display: none;">
+            <h2>Вход</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-pass" placeholder="Пароль">
+            <button onclick="login()">Войти</button>
+            <p>Нет аккаунта? <a href="#" onclick="showRegister()">Создать</a></p>
+        </div>
+
+        <div id="profile-view" style="display: none; text-align: center; max-width: 400px; margin: 0 auto;">
+            <h2>👤 Личный кабинет</h2>
+            <img id="user-avatar" src="" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 10px; border: 2px solid #007bff; object-fit: cover;">
+            <p><strong>Email (Postgres):</strong> <span id="user-email"></span></p>
+    
+            <input type="hidden" id="user-id-hidden">
+
+            <hr>
+            <h3>✏️ Редактировать (MongoDB)</h3>
+    
+            <input type="text" id="edit-bio" placeholder="Напиши что-то о себе (Bio)">
+            <input type="text" id="edit-avatar" placeholder="Вставь ссылку на картинку (URL)">
+    
+            <button onclick="updateProfile()" style="background-color: #28a745; margin-bottom: 10px;">Сохранить изменения</button>
+            <button onclick="logout()" style="background-color: #dc3545;">Выйти</button>
+        </div>
+        
+        <p id="message" style="color: red;"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
