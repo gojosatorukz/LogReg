@@ -1,5 +1,7 @@
 # 🔐 Hybrid Auth System: Node.js + PostgreSQL + MongoDB
 
+---
+
 ## 📋 Assignment Overview
 **Assignment 3:** Creating a Registration and Login System with Mixed Databases.
 This project implements a secure, backend-focused authentication system using a **Hybrid Architecture**. It leverages **PostgreSQL** for secure credential storage and **MongoDB** for flexible user profile management, strictly following the MVC pattern.
