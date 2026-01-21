@@ -8,12 +8,12 @@ This project implements a secure, backend-focused authentication system using a 
 
 ## 🚀 Features & Requirements Met
 This solution addresses all core requirements of the assignment:
-* [cite_start]**Hybrid Database:** Combines PostgreSQL (Relational) and MongoDB (NoSQL)[cite: 3, 4].
-* [cite_start]**Security:** Passwords are hashed using `bcrypt` (never stored in plain text)[cite: 6].
-* [cite_start]**Validation:** Dedicated middleware (`validateAuth`) checks input presence, format, and password length[cite: 6].
-* [cite_start]**Graceful Handling:** Uses `upsert` logic to handle profile creation/updates seamlessly[cite: 6].
-* [cite_start]**Architecture:** Code is organized into `routes`, `controllers`, `models`, and `middleware`[cite: 6].
-* [cite_start]**Frontend:** A responsive, modern HTML/CSS/JS client with persistent login state (`localStorage`)[cite: 6].
+* **Hybrid Database:** Combines PostgreSQL (Relational) and MongoDB (NoSQL)[cite: 3, 4].
+* **Security:** Passwords are hashed using `bcrypt` (never stored in plain text)[cite: 6].
+* **Validation:** Dedicated middleware (`validateAuth`) checks input presence, format, and password length[cite: 6].
+* **Graceful Handling:** Uses `upsert` logic to handle profile creation/updates seamlessly[cite: 6].
+* **Architecture:** Code is organized into `routes`, `controllers`, `models`, and `middleware`[cite: 6].
+* **Frontend:** A responsive, modern HTML/CSS/JS client with persistent login state (`localStorage`)[cite: 6].
 
 ---
 
@@ -153,8 +153,6 @@ node server.js
 ---
 
 ## 💡 Key Design Decisions (Hybrid Architecture)
-
-*(Explanation for Defense)*
 
 This project implements a **Hybrid Database Architecture** to maximize efficiency:
 
