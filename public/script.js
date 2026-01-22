@@ -62,13 +62,15 @@ async function updateProfile() {
 
     if (res.ok) {
         alert('Данные обновлены!');
-
+        
         const currentUser = JSON.parse(localStorage.getItem('user'));
         const updatedUser = { ...currentUser, bio: bio, avatar: avatarUrl };
         
         localStorage.setItem('user', JSON.stringify(updatedUser));
         
         document.getElementById('user-avatar').src = avatarUrl;
+        
+        document.getElementById('bio-display').innerText = bio; 
     } else {
         alert('Ошибка обновления');
     }
@@ -80,8 +82,10 @@ function showProfile(user) {
     document.getElementById('profile-view').style.display = 'block';
     
     document.getElementById('user-email').innerText = user.email;
-    document.getElementById('user-avatar').src = user.avatar || "";
+    document.getElementById('user-avatar').src = user.avatar || ""; 
     document.getElementById('user-id-hidden').value = user.userId;
+    
+    document.getElementById('bio-display').innerText = user.bio || "Нет статуса";
     
     document.getElementById('edit-bio').value = user.bio || "";
     document.getElementById('edit-avatar').value = user.avatar || "";
